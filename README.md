@@ -1,2 +1,2 @@
 # JSAlgos
-Implementing all possible Algorithms in Javascript
+Implementation of DSA in the JS
