@@ -1,5 +1,4 @@
 // Write the polifill for faltten
-
 Array.prototype.flatten = function (flatArray = []) {
   const arr = this;
   if (!this.length)
@@ -61,6 +60,15 @@ Promise.all = function (promises) {
     }
   });
 };
+
+1
+2
+3
+4
+
+{
+
+}
 
 // Promise.all([
 //   new Promise(resolve => resolve(1)),

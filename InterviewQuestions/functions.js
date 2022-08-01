@@ -52,3 +52,28 @@ const sum = (a) => {
 // console.log(sum(1)(2)(3)(4)());
 
 
+// function sum(...args) { return args.reduce((acc, current) => acc + current, 0); }
+// sum(1,2,3)//6
+// sum(1,2)(3)
+// sum(1)(2,3)
+// sum(1)(2)(3)()
+
+const sumAllElements = (array) => {
+  let sum = 0;
+  for (const el of array) {
+    sum = Number(el) + sum;
+  }
+  return sum;
+};
+
+function curriedFunction(...a) {
+  return function (...b) {
+    const aSum = sumAllElements(a);
+    if (b.length === 0) return a[0];
+    const bSum = sumAllElements(b);
+    return curriedFunction(aSum + bSum);
+  };
+}
+
+const result = curriedFunction(1, 2, 3);
+console.log(result());

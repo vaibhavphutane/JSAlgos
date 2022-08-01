@@ -1,4 +1,7 @@
+
 const data = [-4, -3, -2, -1, 0, 1, 2, 5];
+target = 9;
+
 
 const sumZero = (arr) => {
   let i = 0;
